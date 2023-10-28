@@ -86,6 +86,12 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 
+* Go to your web browser and paste the following URL to verify the setup:
+
+```sh
+http://public_ip_address_of_web_server_2:8000
+```
+
 ### Step 4: Provision an EC2 Instance for the 2nd Web Server
 Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Web Server 2
