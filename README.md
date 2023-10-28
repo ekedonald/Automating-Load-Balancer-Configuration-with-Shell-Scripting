@@ -4,7 +4,7 @@ The following steps are taken to automate load balancer configuration with shell
 ### Step 1: Provision an EC2 Instance for the 1st Web Server
 Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Web Server 1
-* AMI: Ubuntu
+* AMI: Ubuntu Server 22.04 LTS (HVM), SSD Volume Type
 * New Key Pair Name: web11
 * Key Pair Type: RSA
 * Private Key File Format: .pem
@@ -95,7 +95,7 @@ http://public_ip_address_of_web_server_2:8000
 ### Step 4: Provision an EC2 Instance for the 2nd Web Server
 Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Web Server 2
-* AMI: Ubuntu
+* AMI: Ubuntu Server 22.04 LTS (HVM), SSD Volume Type
 * Key Pair Name: web11
 * Security Group: Apache Server Security Group
 
@@ -182,7 +182,7 @@ http://public_ip_address_of_web_server_2:8000
 ### Step 8: Provision an EC2 Instance for the Load Balancer
 Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Load Balancer
-* AMI: Ubuntu
+* AMI: Ubuntu Server 22.04 LTS (HVM), SSD Volume Type
 * New Key Pair Name: web11
 * New Security Group: launch-wizard-19
 * Inbound Rule: Allow Traffic From Anywhere On Port 80 and Port 22.
