@@ -21,6 +21,7 @@ cd Downloads
 
 * SSH into the Instance using the command shown below:
 
+### Step 3: Deployment of the 1st Web Server
 * Create and open a file using the command shown below:
 
 ```sh
@@ -85,14 +86,14 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 
-### Step 3: Provision an EC2 Instance for the 2nd Web Server
+### Step 4: Provision an EC2 Instance for the 2nd Web Server
 Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Web Server 2
 * AMI: Ubuntu
 * Key Pair Name: web11
 * Security Group: Apache Server Security Group
 
-### Step 4: Connect to the 2nd Web Server via the terminal using SSH
+### Step 5: Connect to the 2nd Web Server via the terminal using SSH
 * Open terminal on your computer.
 * Run the following command to go to the directory (i.e. Downloads) where the `.pem` key pair file was downloaded.
 
@@ -102,6 +103,7 @@ cd Downloads
 
 * SSH into the Instance using the command shown below:
 
+### Step 6: Deployment of the 2nd Web Server
 * Create and open a file using the command shown below:
 
 ```sh
@@ -165,6 +167,28 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 
-### Step 5:
+### Step 8: Provision an EC2 Instance for the Load Balancer
+Use the following parameters when configuring the EC2 Instance:
+* Name of Instance: Load Balancer
+* AMI: Ubuntu
+* New Key Pair Name: web11
+* New Security Group: launch-wizard-19
+* Inbound Rule: Allow Traffic From Anywhere On Port 80 and Port 22.
 
+### Step 9: Connect to the Load Balancer via the terminal using SSH
+* Open terminal on your computer.
+* Run the following command to go to the directory (i.e. Downloads) where the `.pem` key pair file was downloaded.
 
+```sh
+cd Downloads
+```
+
+* SSH into the Instance using the command shown below:
+
+### Step 10: Deploying and Configuring Nginx Load Balancer
+* Create and open a file using the command shown below:
+
+```sh
+sudo vi install.sh
+```
+* Paste the script shown below into the file then save and exit the file:
