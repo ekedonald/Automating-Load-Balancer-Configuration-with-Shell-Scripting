@@ -1,5 +1,6 @@
 # Automating Load Balancer Cofiguration With Shell Scripting
 The following steps are taken to automate load balancer configuration with shell scripting.
+
 ### Step 1: Provision an EC2 Instance for the 1st Web Server
 Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Web Server 1
@@ -10,7 +11,7 @@ Use the following parameters when configuring the EC2 Instance:
 * Security Group: Apache Web Server Security Group
 * Inbound Rule: Allow Traffic From Anywhere On Port 8000 and Port 22.
 
-### Step 2: Connect to the Webserver via the terminla using SSH
+### Step 2: Connect to the 1st Web Server via the terminal using SSH
 * Open terminal on your computer.
 * Run the following command to go to the directory (i.e. Downloads) where the `.pem` key pair file was downloaded.
 
@@ -26,7 +27,7 @@ cd Downloads
 sudo vi install.sh
 ```
 
-* Paste the script shown below into the file:
+* Paste the script shown below into the file then save and exit the file:
 
 ```sh
 #!/bin/bash
@@ -71,3 +72,14 @@ echo "<!DOCTYPE html>
 
 sudo systemctl restart apache2
 ```
+
+* Assign executable permissions on the file using the command shown below:
+
+```sh
+sudo chmod +x install.sh
+```
+
+* Run the shell script using the command shown below:
+
+./install.sh
+
