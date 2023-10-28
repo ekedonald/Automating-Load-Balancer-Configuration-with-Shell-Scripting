@@ -19,10 +19,20 @@ Use the following parameters when configuring the EC2 Instance:
 cd Downloads
 ```
 
-* SSH into the Instance using the command shown below:
+* Paste the following command to give read permissions to the `.pem` key pair file:
+
+```sh
+sudo chmod 400 <private-key-pair-name>.pem
+```
+
+* SSH into the **Web Server 1 Instance** using the command shown below:
+
+```sh
+ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
+```
 
 ### Step 3: Deployment of the 1st Web Server
-* Create and open a file using the command shown below:
+* Create and open a file `install.sh` using the command shown below:
 
 ```sh
 sudo vi install.sh
@@ -107,10 +117,14 @@ Use the following parameters when configuring the EC2 Instance:
 cd Downloads
 ```
 
-* SSH into the Instance using the command shown below:
+* SSH into the **Web Server 2 Instance** using the command shown below:
+
+```sh
+ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
+```
 
 ### Step 6: Deployment of the 2nd Web Server
-* Create and open a file using the command shown below:
+* Create and open a file `install.sh` using the command shown below:
 
 ```sh
 sudo vi install.sh
@@ -195,10 +209,10 @@ Use the following parameters when configuring the EC2 Instance:
 cd Downloads
 ```
 
-* SSH into the Instance using the command shown below:
+* SSH into the **Load Balancer Instance** using the command shown below:
 
 ### Step 10: Deploying and Configuring Nginx Load Balancer
-* Create and open a file using the command shown below:
+* Create and open a file `nginx.sh` using the command shown below:
 
 ```sh
 sudo vi nginx.sh
