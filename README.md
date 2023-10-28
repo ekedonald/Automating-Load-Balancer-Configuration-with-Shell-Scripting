@@ -1,5 +1,5 @@
 # Automating Load Balancer Configuration With Shell Scripting
-The following steps are taken to automate load balancer configuration with shell scripting.
+The following steps are taken to automate Load Balancer configuration to distribute traffic between 2 Web Servers with shell scripting:
 
 ### Step 1: Provision an EC2 Instance for the 1st Web Server
 Use the following parameters when configuring the EC2 Instance:
