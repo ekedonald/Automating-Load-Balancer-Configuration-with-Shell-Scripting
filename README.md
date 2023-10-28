@@ -1,4 +1,4 @@
-# Automating Load Balancer Cofiguration With Shell Scripting
+# Automating Load Balancer Configuration With Shell Scripting
 The following steps are taken to automate load balancer configuration with shell scripting.
 
 ### Step 1: Provision an EC2 Instance for the 1st Web Server
@@ -12,7 +12,7 @@ Use the following parameters when configuring the EC2 Instance:
 * Inbound Rule: Allow Traffic From Anywhere On Port 8000 and Port 22.
 
 ### Step 2: Connect to the 1st Web Server via the terminal using SSH
-* Open terminal on your computer.
+* Open the terminal on your computer.
 * Run the following command to go to the directory (i.e. Downloads) where the `.pem` key pair file was downloaded.
 
 ```sh
@@ -100,7 +100,7 @@ Use the following parameters when configuring the EC2 Instance:
 * Security Group: Apache Server Security Group
 
 ### Step 5: Connect to the 2nd Web Server via the terminal using SSH
-* Open terminal on your computer.
+* Open the terminal on your computer.
 * Run the following command to go to the directory (i.e. Downloads) where the `.pem` key pair file was downloaded.
 
 ```sh
@@ -188,7 +188,7 @@ Use the following parameters when configuring the EC2 Instance:
 * Inbound Rule: Allow Traffic From Anywhere On Port 80 and Port 22.
 
 ### Step 9: Connect to the Load Balancer via the terminal using SSH
-* Open terminal on your computer.
+* Open the terminal on your computer.
 * Run the following command to go to the directory (i.e. Downloads) where the `.pem` key pair file was downloaded.
 
 ```sh
@@ -245,7 +245,7 @@ if [[ $? -eq 0 ]]; then
     echo " upstream backend_servers {
 
             # your are to replace the public IP and Port to that of your webservers
-            server  "${firstWebserver}"; # public IP and port for webserser 1
+            server  "${firstWebserver}"; # public IP and port for webserver 1
             server "${secondWebserver}"; # public IP and port for webserver 2
 
             }
