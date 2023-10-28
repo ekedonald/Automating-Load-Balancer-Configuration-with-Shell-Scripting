@@ -167,6 +167,12 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 
+* Go to your web browser and paste the following URL to verify the setup:
+
+```sh
+http://public_ip_address_of_web_server_2:8000
+```
+
 ### Step 8: Provision an EC2 Instance for the Load Balancer
 Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Load Balancer
@@ -258,3 +264,17 @@ sudo systemctl restart nginx
 ```sh
 sudo chmod +x install.sh
 ```
+
+* Run the shell script using the command shown below:
+
+```sh
+./nginx.sh
+```
+
+* Go to your web browser and paste the following URL to verify the setup:
+
+```sh
+http://public_ip_address_of_load_balancer:80
+```
+
+_Each time you refresh the page, you will see the web page of the 1st and 2nd Web Server._
