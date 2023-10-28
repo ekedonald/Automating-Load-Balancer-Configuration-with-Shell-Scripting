@@ -5,10 +5,10 @@ The following steps are taken to automate load balancer configuration with shell
 Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Web Server 1
 * AMI: Ubuntu
-* Key Pair Name: web11
+* New Key Pair Name: web11
 * Key Pair Type: RSA
 * Private Key File Format: .pem
-* Security Group: Apache Web Server Security Group
+* New Security Group: Apache Web Server Security Group
 * Inbound Rule: Allow Traffic From Anywhere On Port 8000 and Port 22.
 
 ### Step 2: Connect to the 1st Web Server via the terminal using SSH
@@ -82,4 +82,11 @@ sudo chmod +x install.sh
 * Run the shell script using the command shown below:
 
 ./install.sh
+
+### Step 3: Provision an EC2 Instance for the 2nd Web Server
+Use the following parameters when configuring the EC2 Instance:
+* Name of Instance: Web Server 2
+* AMI: Ubuntu
+* Key Pair Name: web11
+* Security Group: Apache Server Security Group
 
