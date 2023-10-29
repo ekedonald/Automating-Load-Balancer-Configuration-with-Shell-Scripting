@@ -9,7 +9,7 @@ Use the following parameters when configuring the EC2 Instance:
 * Key Pair Type: RSA
 * Private Key File Format: .pem
 * New Security Group: Apache Web Server Security Group
-* Inbound Rule: Allow Traffic From Anywhere On Port 8000 and Port 22.
+* Inbound Rules: Allow Traffic From Anywhere On Port 8000 and Port 22.
 
 ![web server 1](./images/1.%20webserver%201.png)
 _Instance Summary for Web Server 1_
