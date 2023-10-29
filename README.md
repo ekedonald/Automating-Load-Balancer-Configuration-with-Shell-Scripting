@@ -11,6 +11,9 @@ Use the following parameters when configuring the EC2 Instance:
 * New Security Group: Apache Web Server Security Group
 * Inbound Rule: Allow Traffic From Anywhere On Port 8000 and Port 22.
 
+![web server 1](./images/1.%20webserver%201.png)
+_Instance Summary for Web Server 1_
+
 ### Step 2: Connect to the 1st Web Server via the terminal using SSH
 * Open the terminal on your computer.
 * Run the following command to go to the directory (i.e. Downloads) where the `.pem` key pair file was downloaded.
@@ -30,6 +33,8 @@ sudo chmod 400 <private-key-pair-name>.pem
 ```sh
 ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
 ```
+
+![ssh web server 1](./images/1.%20ssh%20webserver%201.png)
 
 ### Step 3: Deployment of the 1st Web Server
 * Create and open a file `install.sh` using the command shown below:
@@ -83,6 +88,8 @@ echo "<!DOCTYPE html>
 
 sudo systemctl restart apache2
 ```
+
+![web server 1 script](./images/1.%20webserver_1_script.png)
 
 * Assign executable permissions on the file using the command shown below:
 
