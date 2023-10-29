@@ -122,6 +122,10 @@ Use the following parameters when configuring the EC2 Instance:
 * Key Pair Name: web11
 * Security Group: Apache Server Security Group
 
+![web server 2](./images/2.%20webserver%202.png)
+
+_Instance Summary for Web Server 2_
+
 ### Step 5: Connect to the 2nd Web Server via the terminal using SSH
 * Open the terminal on your computer.
 * Run the following command to go to the directory (i.e. Downloads) where the `.pem` key pair file was downloaded.
@@ -135,6 +139,8 @@ cd Downloads
 ```sh
 ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
 ```
+
+![ssh web server 2](./images/2.%20ssh%20webserver%202.png)
 
 ### Step 6: Deployment of the 2nd Web Server
 * Create and open a file `install.sh` using the command shown below:
@@ -188,11 +194,15 @@ echo "<!DOCTYPE html>
 sudo systemctl restart apache2
 ```
 
+![web server 2 script](./images/2.%20webserver_2_script.png)
+
 * Assign executable permissions on the file using the command shown below:
 
 ```sh
 sudo chmod +x install.sh
 ```
+
+![chmod install.sh](./images/2.%20chmod%20install_sh.png)
 
 * Run the shell script using the command shown below:
 
@@ -200,11 +210,15 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 
+![run web server 2 script](./images/2.%20run%20webserver_2%20script.png)
+
 * Go to your web browser and paste the following URL to verify the setup:
 
 ```sh
 http://public_ip_address_of_web_server_2:8000
 ```
+
+![http web server 2](./images/2.%20http_ip_webserver_2.png)
 
 ### Step 8: Provision an EC2 Instance for the Load Balancer
 Use the following parameters when configuring the EC2 Instance:
