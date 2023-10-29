@@ -225,8 +225,11 @@ Use the following parameters when configuring the EC2 Instance:
 * Name of Instance: Load Balancer
 * AMI: Ubuntu Server 22.04 LTS (HVM), SSD Volume Type
 * New Key Pair Name: web11
-* New Security Group: launch-wizard-19
-* Inbound Rule: Allow Traffic From Anywhere On Port 80 and Port 22.
+* New Security Group With Inbound Rules: Allow Traffic From Anywhere On Port 80 and Port 22.
+
+![load balancer](./images/3.%20load%20balancer.png)
+
+_Instance Summary for Load Balancer_
 
 ### Step 9: Connect to the Load Balancer via the terminal using SSH
 * Open the terminal on your computer.
@@ -237,6 +240,12 @@ cd Downloads
 ```
 
 * SSH into the **Load Balancer Instance** using the command shown below:
+
+```sh
+ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
+```
+
+![ssh load balancer](./images/3.%20ssh%20loadbalancer.png)
 
 ### Step 10: Deploying and Configuring Nginx Load Balancer
 * Create and open a file `nginx.sh` using the command shown below:
