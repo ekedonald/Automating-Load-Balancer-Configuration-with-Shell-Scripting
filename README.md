@@ -97,17 +97,23 @@ sudo systemctl restart apache2
 sudo chmod +x install.sh
 ```
 
+![sudo chmod install.sh](./images/1.%20chmod%20install_sh.png)
+
 * Run the shell script using the command shown below:
 
 ```sh
 ./install.sh
 ```
 
+![run web server 1 script](./images/1.%20run%20webserver_1%20script.png)
+
 * Go to your web browser and paste the following URL to verify the setup:
 
 ```sh
-http://public_ip_address_of_web_server_2:8000
+http://public_ip_address_of_web_server_1:8000
 ```
+
+![http public ip web server 1](./images/1.%20http_ip_webserver_1.png)
 
 ### Step 4: Provision an EC2 Instance for the 2nd Web Server
 Use the following parameters when configuring the EC2 Instance:
