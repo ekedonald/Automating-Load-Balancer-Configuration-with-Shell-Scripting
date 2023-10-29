@@ -28,6 +28,8 @@ cd Downloads
 sudo chmod 400 <private-key-pair-name>.pem
 ```
 
+![chmod key pair](./images/1.%20chmod%20key%20pair.png)
+
 * SSH into the **Web Server 1 Instance** using the command shown below:
 
 ```sh
