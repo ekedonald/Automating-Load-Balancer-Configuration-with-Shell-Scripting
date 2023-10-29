@@ -343,4 +343,4 @@ http://public_ip_address_of_load_balancer:80
 
 ![http ip load balancer2](./images/3.%20http%20ip2.png)
 
-_Each time you refresh the page, you will see the web page of the 1st and 2nd Web Server as shown above._
+_Each time you refresh the page, you will see the web page of the **1st** and **2nd Web Server** as shown above._
