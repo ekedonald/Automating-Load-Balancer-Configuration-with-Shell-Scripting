@@ -253,10 +253,10 @@ ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
 ```sh
 sudo vi nginx.sh
 ```
+
 * Paste the script shown below into the file then save and exit the file:
 
 ```sh
-
 #!/bin/bash
 
 ######################################################################################################################
@@ -315,11 +315,15 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
+![load balancer script](./images/3.%20loadbalancer_script.png)
+
 * Assign executable permissions on the file using the command shown below:
 
 ```sh
-sudo chmod +x install.sh
+sudo chmod +x nginx.sh
 ```
+
+![chmod nginx.sh](./images/3.%20chmod%20nginx_sh.png)
 
 * Run the shell script using the command shown below:
 
@@ -327,10 +331,16 @@ sudo chmod +x install.sh
 ./nginx.sh
 ```
 
+![run load balncer script](./images/3.%20run%20loadbalancer_script.png)
+
 * Go to your web browser and paste the following URL to verify the setup:
 
 ```sh
 http://public_ip_address_of_load_balancer:80
 ```
+
+![http ip load balancer1](./images/3.%20http%20ip1.png)
+
+![http ip load balancer2](./images/3.%20http%20ip2.png)
 
 _Each time you refresh the page, you will see the web page of the 1st and 2nd Web Server._
